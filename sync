@@ -1,0 +1,16 @@
+#!/bin/sh
+
+root="$(realpath $(dirname $0))"
+venv="$root/.python"
+act="$venv/bin/activate"
+
+if [ ! -e "$act" ]
+then
+    python3 -m venv --prompt dotfiles --upgrade-deps "$venv"
+    source "$act"
+    pip install -r requrements.txt
+else
+    source "$act"
+fi
+
+exec python sync.py "$@"

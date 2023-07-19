@@ -1,0 +1,5 @@
+init.lua	.config/nvim/init.lua
+htoprc	.config/htop/htoprc
+tmux.conf	.tmux.conf
+zshrc	.zshrc
+gitconfig	.gitconfig
